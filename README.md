@@ -5,6 +5,9 @@
 ## Usage
 
 You can use this library in your project by adding the following dependency to your project.
+The latest version can be found on the GitHub Releases tab or Repository Server:
+
+http://repo.josephworks.net/#browse/search=keyword%3Dtuples
 
 ### Maven Project
 
@@ -20,7 +23,7 @@ You can use this library in your project by adding the following dependency to y
 <dependency>
   <groupId>dev.cedo</groupId>
   <artifactId>Tuples</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>VERSION</version>
 </dependency>
 ```
 
@@ -31,5 +34,5 @@ repositories {
     maven { url "https://repo.josephworks.net/repository/maven-public" }
 }
 ...
-implementation 'dev.cedo:Tuples:1.0-SNAPSHOT@jar'
+implementation 'dev.cedo:Tuples:VERSION@jar'
 ```
