@@ -9,6 +9,14 @@ You can use this library in your project by adding the following dependency to y
 ### Maven Project
 
 ```xml
+<repositories>
+    <repository>
+        <name>JosephWorks-Public</name>
+        <id>josephworks-public</id>
+        <url>https://repo.josephworks.net/repository/maven-public</url>
+    </repository>
+</repositories>
+...
 <dependency>
   <groupId>dev.cedo</groupId>
   <artifactId>Tuples</artifactId>
@@ -19,5 +27,9 @@ You can use this library in your project by adding the following dependency to y
 ### Gradle Project
 
 ```groovy
+repositories {
+    maven { url "https://repo.josephworks.net/repository/maven-public" }
+}
+...
 implementation 'dev.cedo:Tuples:1.0-SNAPSHOT@jar'
 ```
