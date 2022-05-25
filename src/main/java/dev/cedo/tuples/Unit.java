@@ -3,6 +3,7 @@ package dev.cedo.tuples;
 import dev.cedo.tuples.immutable.ImmutablePair;
 import dev.cedo.tuples.immutable.ImmutableUnit;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
@@ -13,7 +14,7 @@ import java.util.function.UnaryOperator;
  * @author cedo
  * @since 05/24/2022
  */
-public abstract class Unit<A> {
+public abstract class Unit<A> implements Serializable {
 
     public static <A> Unit<A> of(A a) { return ImmutableUnit.of(a); }
 
