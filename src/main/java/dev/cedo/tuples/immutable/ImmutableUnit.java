@@ -1,20 +1,23 @@
-package dev.cedo.tuples;
+package dev.cedo.tuples.immutable;
 
-import dev.cedo.Unit;
+import dev.cedo.tuples.Unit;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.UnaryOperator;
 
 /**
  * @author cedo
  * @since 05/24/2022
  */
-final class ImmutableUnit<A> implements Unit<A> {
+public final class ImmutableUnit<A> extends Unit<A> {
     private final A a;
 
-    public ImmutableUnit(A a) {
+    ImmutableUnit(A a) {
         this.a = a;
+    }
+
+    public static <A> ImmutableUnit<A> of(A a) {
+        return new ImmutableUnit<>(a);
     }
 
     @Override

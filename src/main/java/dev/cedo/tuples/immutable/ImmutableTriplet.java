@@ -1,12 +1,12 @@
-package dev.cedo.tuples;
+package dev.cedo.tuples.immutable;
 
-import dev.cedo.Triplet;
+import dev.cedo.tuples.Triplet;
 
 /**
  * @author cedo
  * @since 05/24/2022
  */
-class ImmutableTriplet<A, B, C> implements Triplet<A, B, C> {
+public final class ImmutableTriplet<A, B, C> extends Triplet<A, B, C> {
     private final A a;
     private final B b;
     private final C c;
@@ -15,6 +15,10 @@ class ImmutableTriplet<A, B, C> implements Triplet<A, B, C> {
         this.a = a;
         this.b = b;
         this.c = c;
+    }
+
+    public static <A, B, C> ImmutableTriplet<A, B, C> of(A a, B b, C c) {
+        return new ImmutableTriplet<>(a, b, c);
     }
 
 

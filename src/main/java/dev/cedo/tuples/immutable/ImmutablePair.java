@@ -1,6 +1,6 @@
-package dev.cedo.tuples;
+package dev.cedo.tuples.immutable;
 
-import dev.cedo.Pair;
+import dev.cedo.tuples.Pair;
 
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
@@ -9,13 +9,17 @@ import java.util.function.BiFunction;
  * @author cedo
  * @since 05/24/2022
  */
-final class ImmutablePair<A, B> implements Pair<A, B> {
+public final class ImmutablePair<A, B> extends Pair<A, B> {
     private final A a;
     private final B b;
 
     ImmutablePair(A a, B b) {
         this.a = a;
         this.b = b;
+    }
+
+    public static <A, B> ImmutablePair<A, B> of(A a, B b) {
+        return new ImmutablePair<>(a, b);
     }
 
     @Override
