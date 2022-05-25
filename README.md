@@ -1,4 +1,4 @@
-# Tuples
+# Tuples [![Build Status](https://ci.josephworks.net/job/Tuples/badge/icon?style=flat-square)](https://ci.josephworks.net/job/Tuples/)
 
 ### A helper for storing multiple datatype under a Tuple.
 
