@@ -3,6 +3,7 @@ package dev.cedo.tuples;
 import dev.cedo.tuples.immutable.ImmutablePair;
 import dev.cedo.tuples.immutable.ImmutableTriplet;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
@@ -11,7 +12,7 @@ import java.util.function.BiFunction;
  * @author cedo
  * @since 05/24/2022
  */
-public abstract class Triplet<A, B, C> {
+public abstract class Triplet<A, B, C> implements Serializable {
 
     public static <A, B, C> Triplet<A, B, C> of(A a, B b, C c) { return ImmutableTriplet.of(a, b, c); }
 
