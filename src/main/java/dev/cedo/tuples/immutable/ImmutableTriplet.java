@@ -38,7 +38,7 @@ public final class ImmutableTriplet<A, B, C> extends Triplet<A, B, C> {
     }
 
     @Override
-    public <R> R use(TriFunction<? super A, ? super B, ? super C, ? extends R> func) {
+    public <R> R apply(TriFunction<? super A, ? super B, ? super C, ? extends R> func) {
         return func.apply(a, b, c);
     }
 

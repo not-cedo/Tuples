@@ -1,12 +1,9 @@
 package dev.cedo.tuples;
 
-import dev.cedo.tuples.immutable.ImmutablePair;
 import dev.cedo.tuples.immutable.ImmutableTriplet;
 
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
 
 /**
  * @author cedo
@@ -20,7 +17,7 @@ public abstract class Triplet<A, B, C> implements Serializable {
     public abstract B getSecond();
     public abstract C getThird();
 
-    public abstract <R> R use(TriFunction<? super A, ? super B, ? super C, ? extends R> func);
+    public abstract <R> R apply(TriFunction<? super A, ? super B, ? super C, ? extends R> func);
     public abstract void use(TriConsumer<? super A, ? super B, ? super C> func);
 
 

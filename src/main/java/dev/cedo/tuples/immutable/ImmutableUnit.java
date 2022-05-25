@@ -26,7 +26,7 @@ public final class ImmutableUnit<A> extends Unit<A> {
     }
 
     @Override
-    public <R> R use(Function<? super A, ? extends R> func) {
+    public <R> R apply(Function<? super A, ? extends R> func) {
        return func.apply(a);
     }
 

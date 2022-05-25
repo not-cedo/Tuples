@@ -29,7 +29,7 @@ public class MutableUnit<A> extends Unit<A> {
     public void set(A a) { this.a = a; }
 
     @Override
-    public <R> R use(Function<? super A, ? extends R> func) {
+    public <R> R apply(Function<? super A, ? extends R> func) {
         return func.apply(a);
     }
 

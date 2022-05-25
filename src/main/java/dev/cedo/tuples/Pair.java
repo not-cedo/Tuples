@@ -1,14 +1,11 @@
 package dev.cedo.tuples;
 
 import dev.cedo.tuples.immutable.ImmutablePair;
-import dev.cedo.tuples.mutable.MutablePair;
 
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 /**
  * @author cedo
@@ -22,7 +19,7 @@ public abstract class Pair<A, B> implements Serializable {
 
     public abstract B getSecond();
 
-    public abstract <R> R use(BiFunction<? super A, ? super B, ? extends R> func);
+    public abstract <R> R apply(BiFunction<? super A, ? super B, ? extends R> func);
 
     public abstract void use(BiConsumer<? super A, ? super B> func);
 

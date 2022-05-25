@@ -34,7 +34,7 @@ public class MutablePair<A, B> extends Pair<A, B> {
     public void setSecond(B b) { this.b = b; }
 
     @Override
-    public <R> R use(BiFunction<? super A, ? super B, ? extends R> func) { return func.apply(a, b); }
+    public <R> R apply(BiFunction<? super A, ? super B, ? extends R> func) { return func.apply(a, b); }
 
     @Override
     public void use(BiConsumer<? super A, ? super B> func) {

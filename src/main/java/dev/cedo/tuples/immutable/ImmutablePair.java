@@ -34,7 +34,7 @@ public final class ImmutablePair<A, B> extends Pair<A, B> {
 
 
     @Override
-    public <R> R use(BiFunction<? super A, ? super B, ? extends R> func) {
+    public <R> R apply(BiFunction<? super A, ? super B, ? extends R> func) {
         return func.apply(a, b);
     }
 

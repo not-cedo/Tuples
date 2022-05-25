@@ -1,14 +1,11 @@
 package dev.cedo.tuples;
 
-import dev.cedo.tuples.immutable.ImmutablePair;
 import dev.cedo.tuples.immutable.ImmutableUnit;
 
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.UnaryOperator;
 
 /**
  * @author cedo
@@ -20,7 +17,7 @@ public abstract class Unit<A> implements Serializable {
 
     public abstract A get();
 
-    public abstract <R> R use(Function<? super A, ? extends R> func);
+    public abstract <R> R apply(Function<? super A, ? extends R> func);
     public abstract void use(Consumer<? super A> func);
 
     @Override

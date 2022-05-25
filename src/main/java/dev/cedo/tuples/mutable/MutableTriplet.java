@@ -39,7 +39,7 @@ public class MutableTriplet<A, B, C> extends Triplet<A, B, C> {
     public void setThird(C c) { this.c = c; }
 
     @Override
-    public <R> R use(TriFunction<? super A, ? super B, ? super C, ? extends R> func) { return func.apply(a, b, c); }
+    public <R> R apply(TriFunction<? super A, ? super B, ? super C, ? extends R> func) { return func.apply(a, b, c); }
 
     @Override
     public void use(TriConsumer<? super A, ? super B, ? super C> func) { func.accept(a, b, c); }
