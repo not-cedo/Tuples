@@ -23,6 +23,16 @@ public class MutableTriplet<A, B, C> extends Triplet<A, B, C> {
         return new MutableTriplet<>(a, b, c);
     }
 
+    public static <A> MutableTriplet<A, A, A> of(A a) {
+        return new MutableTriplet<>(a, a, a);
+    }
+
+    public MutableTriplet<A, A, A> pairOfFirst() { return of(a); }
+
+    public MutableTriplet<B, B, B> pairOfSecond() { return of(b); }
+
+    public MutableTriplet<C, C, C> pairOfThird() { return of(c); }
+
     @Override
     public A getFirst() { return a; }
 

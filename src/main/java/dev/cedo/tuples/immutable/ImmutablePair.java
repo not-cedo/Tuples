@@ -22,6 +22,10 @@ public final class ImmutablePair<A, B> extends Pair<A, B> {
         return new ImmutablePair<>(a, b);
     }
 
+    public Pair<A, A> pairOfFirst() { return Pair.of(a); }
+
+    public Pair<B, B> pairOfSecond() { return Pair.of(b); }
+
     @Override
     public A getFirst() {
         return a;

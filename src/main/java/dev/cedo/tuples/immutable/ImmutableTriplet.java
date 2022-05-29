@@ -21,6 +21,12 @@ public final class ImmutableTriplet<A, B, C> extends Triplet<A, B, C> {
         return new ImmutableTriplet<>(a, b, c);
     }
 
+    public Triplet<A, A, A> pairOfFirst() { return Triplet.of(a); }
+
+    public Triplet<B, B, B> pairOfSecond() { return Triplet.of(b); }
+
+    public Triplet<C, C, C> pairOfThird() { return Triplet.of(c); }
+
 
     @Override
     public A getFirst() {

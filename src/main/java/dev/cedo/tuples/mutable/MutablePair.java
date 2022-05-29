@@ -19,9 +19,18 @@ public class MutablePair<A, B> extends Pair<A, B> {
         this.b = b;
     }
 
-    public static <L, R> MutablePair<L, R> of(final L left, final R right) {
-        return new MutablePair<>(left, right);
+    public static <A, B> MutablePair<A, B> of(A a, B b) {
+        return new MutablePair<>(a, b);
     }
+
+    public static <A> MutablePair<A, A> of(A a) {
+        return new MutablePair<>(a, a);
+    }
+
+    public MutablePair<A, A> pairOfFirst() { return of(a); }
+
+    public MutablePair<B, B> pairOfSecond() { return of(b); }
+
 
     @Override
     public A getFirst() { return a; }

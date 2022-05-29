@@ -13,6 +13,8 @@ public abstract class Triplet<A, B, C> implements Serializable {
 
     public static <A, B, C> Triplet<A, B, C> of(A a, B b, C c) { return ImmutableTriplet.of(a, b, c); }
 
+    public static <A> Triplet<A, A, A> of(A a) { return ImmutableTriplet.of(a, a ,a); }
+
     public abstract A getFirst();
     public abstract B getSecond();
     public abstract C getThird();
