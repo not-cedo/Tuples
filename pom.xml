@@ -6,7 +6,7 @@
 
     <groupId>dev.cedo</groupId>
     <artifactId>Tuples</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.3-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
